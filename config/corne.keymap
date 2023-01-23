@@ -9,6 +9,17 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+        behaviors {
+            hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping-term-ms = <150>;
+                quick-tap-ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+        };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -19,10 +30,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | LSHFT|
 //                    | GUI | LWR | SPC |   | ENT | RSE  | CTRL|
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &lt 4 ESC &kp A &kp S &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L   &lt 4 SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                  &kp LGUI &mo 1 &mt LSHFT SPACE   &mt LSHFT RET &mo 2 &kp LCTRL
+   &kp TAB   &kp Q       &kp W      &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O        &kp P    &kp BSPC
+   &lt 4 ESC &kp A       &kp S      &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L        &lt 4 SEMI &kp SQT
+   &kp LSHFT &hw LCTRL Z &hw LALT X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &hw RALT DOT &hw RCTRL FSLH &kp RSHFT
+                  &kp LGUI &mo 1 &hw LSHFT SPACE   &hw LSHFT RET &mo 2 &kp LCTRL
                         >;
                 };
                 lower_layer {
