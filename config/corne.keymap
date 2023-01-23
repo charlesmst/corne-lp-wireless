@@ -69,9 +69,9 @@
 
                 tiling_layer {
                         bindings = <
-   &trans      &trans       &trans       &trans        &trans        &trans         &trans     &trans     &trans     &trans       &trans      &trans1
-   &trans      &trans       &trans       &trans        &trans        &trans         &trans     &trans     &trans     &trans       &trans      &trans
-   &trans      &trans       &trans       &trans        &trans        &trans         &trans     &trans     &trans     &trans       &trans      &trans
+   &trans      &kp LA(LS(1)) &kp LA(LS(2)) &kp LA(LS(3)) &kp LA(LS(4)) &kp LA(LS(5)) &kp LA(LS(6)) &kp LA(LS(7)) &kp LA(LS(8)) &kp LA(LS(9)) &trans      &trans
+   &trans      &trans        &trans     &trans     &trans        &trans         &trans     &trans     &trans     &trans       &trans      &trans
+   &trans      &trans        &trans       &trans   &trans        &trans         &trans     &trans     &trans     &trans       &trans      &trans
                           	        &trans        &trans       &trans         &trans     &trans     &trans
                         >;
                 };
