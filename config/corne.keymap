@@ -76,12 +76,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  F1  |  F2  |  F3            |  F4           |  F5  |   |  F6  |  F7  |  F8  |  F9  |  F10  | F11 |
 // |      |      |      |  ALT(SHIFT(3)) | ALT(SHIFT(4)) | PRNT |   | PREV | PLAY | NEXT | VOLD | VOLU  | F12 |
-// | BTCLR| BT1  | BT2  | BT3            | BT4           | BT5  |   |      |      |      |      |       | MUT |
+// | BTCLR| BT1  | BT2  | BT3            | BT4           | BT5  |   |      | DEF  |  GAM |      |       | MUT |
 //                    |      |     |    |        |     |     |     |
                         bindings = <
    &trans      &kp F1       &kp F2       &kp F3        &kp F4        &kp F5         &kp F6     &kp F7     &kp F8     &kp F9       &kp F10      &kp F11
    &trans      &trans       &trans       &kp LA(LS(3)) &kp LA(LS(4)) &kp PSCRN      &kp C_PREV &kp C_PLAY &kp C_NEXT &kp C_VOL_DN &kp C_VOL_UP &kp F12
-   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &trans     &trans     &trans     &trans       &trans       &kp C_MUTE
+   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &to 0      &to 5      &trans     &trans       &trans       &kp C_MUTE
                           	        &trans        &trans       &trans         &trans     &trans     &trans
                         >;
                 };
