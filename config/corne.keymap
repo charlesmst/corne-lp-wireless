@@ -94,9 +94,9 @@
                 tiling_layer {
                         label = "Tiling"
                         bindings = <
-   &trans      &kp LA(LS(N1)) &kp LA(LS(N2)) &kp LA(LS(N3)) &kp LA(LS(N4)) &kp LA(LS(N5)) &kp LA(LS(N6)) &kp LA(LS(N7)) &kp LA(LS(N8)) &kp LA(LS(N9)) &trans      &trans
-   &trans      &trans        &trans     &trans     &trans        &trans         &trans     &trans     &trans     &trans       &trans      &trans
-   &trans      &trans        &trans       &trans   &trans        &trans         &trans     &trans     &trans     &trans       &trans      &trans
+   &trans      &kp LA(LS(N1)) &kp LA(LS(N2))  &kp LA(LS(N3)) &kp LA(LS(N4)) &kp LA(LS(N5)) &kp LA(LS(N6)) &kp LA(LS(N7)) &kp LA(LS(N8)) &kp LA(LS(N9)) &trans      &trans
+   &trans      &trans         &kp LA(LS(W))   &kp LA(LS(E))  &kp LA(LS(R))        &trans         &trans     &trans     &trans     &trans       &trans      &trans
+   &trans      &kp LA(LS(A))  &kp LA(LS(S))   &kp LA(LS(D))  &trans        &trans         &trans     &trans     &trans     &trans       &trans      &trans
                           	        &trans        &trans       &kp LG(SPACE)         &trans     &trans     &trans
                         >;
                 };
