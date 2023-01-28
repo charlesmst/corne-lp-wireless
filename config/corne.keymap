@@ -19,7 +19,7 @@
     cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
 };
 
-kscan0 {
+&kscan0 {
     debounce-press-ms = <1>;
     debounce-release-ms = <5>;
 };
