@@ -37,6 +37,17 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
+
+            // For enter, I prefer to simulate shift than press enter by accident
+            hk: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOLD_OVER_TAP";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;
+                quick-tap-ms = <0>;
+                flavor = "hold-preferred";
+                bindings = <&kp>, <&kp>;
+            };
         };
 
         keymap {
@@ -53,7 +64,7 @@
    &kp TAB       &kp Q       &kp W      &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O        &kp P          &kp BSPC
    &lt TILIN ESC &kp A       &kp S      &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L        &lt TILIN SEMI &kp SQT
    &kp LSHFT     &hm LCTRL Z &hm LALT X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &hm RALT DOT &hm RCTRL FSLH &kp RSHFT
-                  &kp LGUI &mo LOWER &hm LSHFT SPACE   &hm LSHFT RET &mo RAISE &kp LCTRL
+                  &kp LGUI &mo LOWER &hm LSHFT SPACE   &hk LSHFT RET &mo RAISE &kp LCTRL
                         >;
                 };
 
