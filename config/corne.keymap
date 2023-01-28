@@ -44,16 +44,16 @@
                 bindings = <&kp>, <&kp>;
             };
 
-            // For enter, I prefer to simulate shift than press enter by accident
-            hk: homerow_mods {
+            hs: homerow_mods {
                 compatible = "zmk,behavior-hold-tap";
-                label = "HOLD_OVER_TAP";
+                label = "HOLD_SLOW";
                 #binding-cells = <2>;
-                tapping-term-ms = <200>;
+                tapping-term-ms = <500>;
                 quick-tap-ms = <0>;
-                flavor = "hold-preferred";
+                flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
             };
+
         };
 
         keymap {
@@ -70,7 +70,7 @@
    &kp TAB       &kp Q       &kp W      &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O        &kp P          &kp BSPC
    &lt TILIN ESC &kp A       &kp S      &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L        &lt TILIN SEMI &kp SQT
    &kp LSHFT     &hm LCTRL Z &hm LALT X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &hm RALT DOT &hm RCTRL FSLH &kp RSHFT
-                  &kp LGUI &mo LOWER &hm LSHFT SPACE   &hk LSHFT RET &mo RAISE &kp LCTRL
+                  &kp LGUI &mo LOWER &hm LSHFT SPACE   &hm LSHFT RET &mo RAISE &kp LCTRL
                         >;
                 };
 
@@ -132,8 +132,8 @@
                 tiling_layer {
                         label = "Tiling";
                         bindings = <
-   &trans      &hm LC(LA(LS(N1))) LA(LS(N1)) &hm LC(LA(LS(N2))) LA(LS(N2))  &hm LC(LA(LS(N3))) LA(LS(N3)) &hm LC(LA(LS(N4))) LA(LS(N4)) &hm LC(LA(LS(N5))) LA(LS(N5)) &hm LC(LA(LS(N6))) LA(LS(N6)) &hm LC(LA(LS(N7))) LA(LS(N7)) &hm LC(LA(LS(N8))) LA(LS(N8)) &hm LC(LA(LS(N9))) LA(LS(N9)) &trans      &trans
-   &trans      &trans         &kp LA(LS(W))   &hm LC(LA(LS(E))) LA(LS(E))  &hm LC(LA(LS(R))) LA(LS(R))        &trans         &trans     &trans     &trans     &trans       &trans      &trans
+   &trans      &hs LC(LA(LS(N1))) LA(LS(N1)) &hs LC(LA(LS(N2))) LA(LS(N2))  &hs LC(LA(LS(N3))) LA(LS(N3)) &hs LC(LA(LS(N4))) LA(LS(N4)) &hs LC(LA(LS(N5))) LA(LS(N5)) &hs LC(LA(LS(N6))) LA(LS(N6)) &hs LC(LA(LS(N7))) LA(LS(N7)) &hs LC(LA(LS(N8))) LA(LS(N8)) &hs LC(LA(LS(N9))) LA(LS(N9)) &trans      &trans
+   &trans      &trans         &kp LA(LS(W))   &hs LC(LA(LS(E))) LA(LS(E))  &hs LC(LA(LS(R))) LA(LS(R))        &trans         &trans     &trans     &trans     &trans       &trans      &trans
    &trans      &kp LA(LS(A))  &kp LA(LS(S))   &kp LA(LS(D))  &trans        &trans         &trans     &trans     &trans     &trans       &trans      &trans
                           	        &trans        &trans       &kp LG(SPACE)         &trans     &trans     &trans
                         >;
