@@ -48,7 +48,7 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOLD_MOD";
                 #binding-cells = <2>;
-                tapping-term-ms = <200>;
+                tapping-term-ms = <150>;
                 quick-tap-ms = <0>;
                 flavor = "balanced";
                 bindings = <&kp>, <&kp>;
