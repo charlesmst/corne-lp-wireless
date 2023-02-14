@@ -143,7 +143,7 @@
                         label = "Tiling";
                         bindings = <
    &trans      &hs LC(LA(LS(N1))) LA(LS(N1)) &hs LC(LA(LS(N2))) LA(LS(N2))  &hs LC(LA(LS(N3))) LA(LS(N3)) &hs LC(LA(LS(N4))) LA(LS(N4)) &hs LC(LA(LS(N5))) LA(LS(N5)) &hs LC(LA(LS(N6))) LA(LS(N6)) &hs LC(LA(LS(N7))) LA(LS(N7)) &hs LC(LA(LS(N8))) LA(LS(N8)) &hs LC(LA(LS(N9))) LA(LS(N9)) &trans      &trans
-   &trans      &trans         &kp LA(LS(W))   &hs LC(LA(LS(E))) LA(LS(E))  &hs LC(LA(LS(R))) LA(LS(R))        &trans         &trans     &trans     &trans     &trans       &trans      &trans
+   &trans      &trans         &kp LA(LS(W))   &hs LC(LA(LS(E))) LA(LS(E))  &hs LC(LA(LS(R))) LA(LS(R))    &hs LC(LA(LS(T))) LA(LS(T))         &trans     &trans     &trans     &trans       &trans      &trans
    &trans      &kp LA(LS(A))  &kp LA(LS(S))   &kp LA(LS(D))  &trans        &trans         &trans     &trans     &trans     &trans       &trans      &trans
                           	        &trans        &trans       &kp LG(SPACE)         &trans     &trans     &trans
                         >;
