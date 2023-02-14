@@ -82,7 +82,7 @@
                 #binding-cells = <0>;
                 bindings
                     =  <&macro_tap &bt BT_SEL 0>
-                    , <&macro_tap &kp F13>
+                    , <&macro_tap &kp F15>
                     ;
             };
         };
