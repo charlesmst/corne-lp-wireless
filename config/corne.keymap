@@ -34,10 +34,7 @@
                 if-layers = <3 5>;
                 then-layer = <6>;
             };
-        };
-        conditional_layers_mac {
-            compatible = "zmk,conditional-layers";
-            tri_layer {
+            tri_layer_mac {
                 if-layers = <4 5>;
                 then-layer = <6>;
             };
