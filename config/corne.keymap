@@ -24,13 +24,6 @@
 &kscan0 {
     debounce-press-ms = <1>;
     debounce-release-ms = <5>;
-        row-gpios
-			= <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			, <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-			;
-        };
 
 
 / {
@@ -109,7 +102,7 @@
    &kp TAB       &kp Q       &kp W      &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O        &kp P          &kp BSPC
    &lt TILIN ESC &kp A       &kp S      &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L        &lt TILIN SEMI &kp SQT
    &kp LSHFT     &hm LCTRL Z &hm LALT X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &hm RALT DOT &hm RCTRL FSLH &kp RSHFT
-                  &kp LGUI &mo LOWER &hm LSHFT SPACE   &hm LSHFT RET &mo RAISE &kp LCTRL
+                  &kp LGUI &mo LOWER &kp SPACE   &hm LSHFT RET &mo RAISE &kp LCTRL
                         >;
                 };
 
@@ -137,7 +130,7 @@
                         label = "Number";
                         bindings = <
    &kp GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7    &kp N8    &kp N9    &kp N0   &trans
-   &kp ESC    &kp LALT     &kp RCTRL    &kp TAB      &kp LC(B)    &kp GRAVE      &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp BSPC &trans
+   &kp ESC    &kp LALT     &kp RCTRL    &kp TAB      &kp LC(B)    &kp GRAVE      &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp BSPC &kp RET
    &trans     &kp LC(Z)    &kp LC(X)    &kp LC(C)    &kp LC(V)    &trans         &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DEL  &trans
                           	        &trans       &trans       &trans      &trans  &trans    &trans
                         >;
