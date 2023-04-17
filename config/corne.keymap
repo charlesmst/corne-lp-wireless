@@ -102,7 +102,7 @@
    &kp TAB       &kp Q       &kp W      &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O        &kp P          &kp BSPC
    &lt TILIN ESC &kp A       &kp S      &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L        &lt TILIN SEMI &kp SQT
    &kp LSHFT     &hm LCTRL Z &hm LALT X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &hm RALT DOT &hm RCTRL FSLH &kp RSHFT
-                  &kp LGUI &mo LOWER &kp SPACE   &hm LSHFT RET &mo RAISE &kp LCTRL
+                  &kp LGUI &mo LOWER &hm LSHFT SPACE   &hm LSHFT RET &mo RAISE &kp LCTRL
                         >;
                 };
 
@@ -112,7 +112,7 @@
    &kp TAB       &kp Q       &kp W      &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O        &kp P          &kp BSPC
    &lt TILIN ESC &kp A       &kp S      &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L        &lt TILIN SEMI &kp SQT
    &kp LSHFT     &hm LCTRL Z &hm LALT X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &hm RALT DOT &hm RCTRL FSLH &kp RSHFT
-                  &kp LGUI &mo LOMAC &hm LSHFT SPACE   &hm LSHFT RET &mo RAISE &kp LCTRL
+                  &kp LGUI &mo LOMAC &kpSPACE   &hm LSHFT RET &mo RAISE &kp LCTRL
                         >;
                 };
 
