@@ -100,8 +100,8 @@
                         label = "PC";
                         bindings = <
    &kp TAB       &kp Q       &kp W      &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O        &kp P          &kp BSPC
-   &lt TILIN ESC &kp A       &kp S      &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L        &lt TILIN SEMI &kp SQT
-   &kp LSHFT     &hm LCTRL Z &hm LALT X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &hm RALT DOT &hm RCTRL FSLH &kp RSHFT
+   &lt TILIN ESC &lt TILIN A       &hm LCTRL S      &hm LALT D &hm LGUI F &kp G         &kp H &hm LGUI J  &hm RALT K     &hm RCTRL L        &lt TILIN SEMI &kp SQT
+   &kp LSHFT     &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &hm RALT DOT &hm RCTRL FSLH &kp RSHFT
                   &kp LGUI &mo LOWER &hm LSHFT SPACE   &hm LSHFT RET &mo RAISE &kp LCTRL
                         >;
                 };
@@ -110,8 +110,8 @@
                         label = "Mac";
                         bindings = <
    &kp TAB       &kp Q       &kp W      &kp E &kp R &kp T         &kp Y &kp U  &kp I     &kp O        &kp P          &kp BSPC
-   &lt TILIN ESC &kp A       &kp S      &kp D &kp F &kp G         &kp H &kp J  &kp K     &kp L        &lt TILIN SEMI &kp SQT
-   &kp LSHFT     &hm LCTRL Z &hm LALT X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &hm RALT DOT &hm RCTRL FSLH &kp RSHFT
+
+   &kp LSHFT     &kp Z &kp X &kp C &kp V &kp B         &kp N &kp M  &kp COMMA &hm RALT DOT &hm RCTRL FSLH &kp RSHFT
                   &kp LGUI &mo LOMAC &hm LSHFT SPACE   &hm LSHFT RET &mo RAISE &kp LCTRL
                         >;
                 };
@@ -130,7 +130,7 @@
                         label = "Number";
                         bindings = <
    &kp GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7    &kp N8    &kp N9    &kp N0   &trans
-   &kp ESC    &kp LALT     &kp RCTRL    &kp TAB      &kp LC(B)    &kp GRAVE      &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp BSPC &kp RET
+   &kp ESC    &kp LALT     &kp RCTRL    &kp TAB      &kp ESC    &kp LC(B)      &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp BSPC &kp RET
    &trans     &kp LC(Z)    &kp LC(X)    &kp LC(C)    &kp LC(V)    &trans         &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DEL  &trans
                           	        &trans       &trans       &trans      &trans  &trans    &trans
                         >;
@@ -140,7 +140,7 @@
                         label = "Number Mac";
                         bindings = <
    &kp GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7    &kp N8    &kp N9    &kp N0   &trans
-   &kp ESC    &kp LALT    &kp RCTRL     &kp TAB      &kp LC(B)    &kp GRAVE      &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp BSPC &trans
+   &kp ESC    &kp LALT    &kp RCTRL     &kp TAB      &kp ESC      &kp LC(B)      &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp BSPC &trans
    &trans     &kp LG(Z)    &kp LG(X)    &kp LG(C)    &kp LG(V)    &trans         &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DEL  &trans
                           	        &trans       &trans       &trans      &trans  &trans    &trans
                         >;
