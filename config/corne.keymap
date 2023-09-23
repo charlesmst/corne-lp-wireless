@@ -17,6 +17,9 @@
 #define SUPER 6
 #define TILIN 7
 
+&nice_view_spi {
+    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
+};
 
 &kscan0 {
     debounce-press-ms = <1>;
