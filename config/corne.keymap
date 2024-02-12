@@ -32,12 +32,12 @@
 
         tri_layer {
             if-layers = <2 3>;
-            then-layer = <4>;
+            then-layer = <5>;
         };
 
-        tri_layer_mac {
-            if-layers = <3 3>;
-            then-layer = <4>;
+        tri_layer_gaming {
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 
@@ -97,7 +97,7 @@
             label = "PC";
             bindings = <
 &kp TAB    &kp Q    &kp W        &kp E       &kp R       &kp T              &kp Y          &kp U       &kp I       &kp O         &kp P           &kp BSPC
-&lt 5 ESC  &lt 5 A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G              &kp H          &hm LGUI J  &hm RALT K  &hm RCTRL L   &lt 5 SEMI      &kp SQT
+&lt 6 ESC  &lt 6 A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G              &kp H          &hm LGUI J  &hm RALT K  &hm RCTRL L   &lt 6 SEMI      &kp SQT
 &kp LSHFT  &kp Z    &kp X        &kp C       &kp V       &kp B              &kp N          &kp M       &kp COMMA   &hm RALT DOT  &hm RCTRL FSLH  &kp RSHFT
                                  &kp LGUI    &mo 2       &hm LSHFT SPACE    &hk LSHFT RET  &mo 3       &kp LCTRL
             >;
@@ -107,9 +107,9 @@
             label = "Gaming";
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y          &kp U       &kp I       &kp O         &kp P           &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H          &hm LGUI J  &hm RALT K  &hm RCTRL L   &lt 5 SEMI      &kp SQT
+&kp LCTRL  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H          &hm LGUI J  &hm RALT K  &hm RCTRL L   &lt 6 SEMI      &kp SQT
 &kp LSHFT  &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N          &kp M       &kp COMMA   &hm RALT DOT  &hm RCTRL FSLH  &kp RSHFT
-                         &kp LEFT_ALT  &mo 6  &kp SPACE    &hk LSHFT RET  &mo 3       &kp LCTRL
+                         &kp LEFT_ALT  &mo 4  &kp SPACE    &hk LSHFT RET  &mo 3       &kp LCTRL
             >;
         };
 
@@ -133,6 +133,15 @@
             >;
         };
 
+        gaming_lower {
+            bindings = <
+&kp GRAVE  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5      &kp N6    &kp N7     &kp N8     &kp N9     &kp N0    &trans
+&kp ESC    &trans     &trans     &trans    &trans    &trans      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC  &kp RET
+&kp GLOBE  &kp LC(Z)  &kp LC(X)  &mkp MB2  &mkp MB1  &mkp MB3    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp DEL   &trans
+                                 &trans    &trans    &trans      &trans    &trans     &trans
+            >;
+        };
+
         super_layer {
             label = "Super";
             bindings = <
@@ -150,15 +159,6 @@
 &trans  &trans                         &kp LA(LS(W))                  &hs LC(LA(LS(E))) LA(LS(E))    &hs LC(LA(LS(R))) LA(LS(R))    &hs LC(LA(LS(T))) LA(LS(T))      &trans                         &trans                         &trans                         &trans                         &trans  &trans
 &trans  &kp LA(LS(A))                  &kp LA(LS(S))                  &kp LA(LS(D))                  &trans                         &trans                           &trans                         &trans                         &trans                         &trans                         &trans  &trans
                                                                       &trans                         &trans                         &kp LG(SPACE)                    &trans                         &trans                         &trans
-            >;
-        };
-
-        gaming_lower {
-            bindings = <
-&kp GRAVE  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5      &kp N6    &kp N7     &kp N8     &kp N9     &kp N0    &trans
-&kp ESC    &trans     &trans     &trans    &trans    &trans      &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC  &kp RET
-&kp GLOBE  &kp LC(Z)  &kp LC(X)  &mkp MB2  &mkp MB1  &mkp MB3    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp DEL   &trans
-                                 &trans    &trans    &trans      &trans    &trans     &trans
             >;
         };
     };
