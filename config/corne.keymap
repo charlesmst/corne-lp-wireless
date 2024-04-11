@@ -18,6 +18,7 @@
 #define RAISE 5
 #define SUPER 6
 #define TILIN 7
+#define MOUSE 8
 
 &nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
 
@@ -99,7 +100,7 @@
 &kp TAB    &kp Q    &kp W        &kp E       &kp R       &kp T              &kp Y          &kp U       &kp I       &kp O         &kp P           &kp BSPC
 &lt 6 ESC  &lt 6 A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G              &kp H          &hm LGUI J  &hm RALT K  &hm RCTRL L   &lt 6 SEMI      &kp SQT
 &kp LSHFT  &kp Z    &kp X        &kp C       &kp V       &kp B              &kp N          &kp M       &kp COMMA   &hm RALT DOT  &hm RCTRL FSLH  &kp RSHFT
-                                 &kp LGUI    &mo 2       &hm LSHFT SPACE    &hk LSHFT RET  &mo 3       &kp LCTRL
+                                 &mo 8       &mo 2       &hm LSHFT SPACE    &hk LSHFT RET  &mo 3       &kp LCTRL
             >;
         };
 
@@ -159,6 +160,17 @@
 &trans  &trans                         &kp LA(LS(W))                  &hs LC(LA(LS(E))) LA(LS(E))    &hs LC(LA(LS(R))) LA(LS(R))    &hs LC(LA(LS(T))) LA(LS(T))      &trans                         &trans                         &trans                         &trans                         &trans  &trans
 &trans  &kp LA(LS(A))                  &kp LA(LS(S))                  &kp LA(LS(D))                  &trans                         &trans                           &trans                         &trans                         &trans                         &trans                         &trans  &trans
                                                                       &trans                         &trans                         &kp LG(SPACE)                    &trans                         &trans                         &trans
+            >;
+        };
+
+        mouse_layer {
+            label = "Mouse";
+            bindings = <
+&trans          &trans          &trans          &trans          &trans          &trans              &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &trans          &trans          &trans          &trans          &trans              &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &trans          &trans
+&trans          &mkp MB4        &mkp MB5        &mkp MB2        &mkp MB1        &mkp MB3            &msc MOVE_LEFT  &msc MOVE_DOWN  &msc MOVE_UP    &msc MOVE_RIGHT &trans          &trans
+                                 &trans    &trans    &trans       &trans    &trans     &trans
+&mmv MOVE_UP  &mkp MB2  &mkp MB1  &mkp MB3
             >;
         };
     };
