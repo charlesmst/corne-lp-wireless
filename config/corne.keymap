@@ -119,7 +119,7 @@
             bindings = <
 &kp GRAVE  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5       &kp N6    &kp N7     &kp N8     &kp N9     &kp N0    &trans
 &kp ESC    &kp LALT   &kp RCTRL  &kp TAB   &kp ESC   &kp LC(B)    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC  &kp RET
-&kp GLOBE  &kp LC(Z)  &mmv MOVE_UP  &mkp MB2  &mkp MB1  &mkp MB3     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp DEL   &trans
+&kp GLOBE  &mkp MB4   &mkp MB5   &mkp MB2  &mkp MB1  &mkp MB3     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp DEL   &trans
                                  &trans    &trans    &trans       &trans    &trans     &trans
             >;
         };
@@ -166,9 +166,9 @@
         mouse_layer {
             label = "Mouse";
             bindings = <
-&trans          &trans          &trans          &trans          &trans          &trans              &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &trans          &trans          &trans          &trans          &trans              &msc MOVE_LEFT  &msc MOVE_DOWN  &msc MOVE_UP    &msc MOVE_RIGHT &trans          &trans
 &trans          &trans          &trans          &trans          &trans          &trans              &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &trans          &trans
-&trans          &mkp MB4        &mkp MB5        &mkp MB2        &mkp MB1        &mkp MB3            &msc MOVE_LEFT  &msc MOVE_DOWN  &msc MOVE_UP    &msc MOVE_RIGHT &trans          &trans
+&trans          &mkp MB4        &mkp MB5        &mkp MB2        &mkp MB1        &mkp MB3            &mkp MB5        &mkp MB1        &mkp MB2        &mkp MB5        &mkp MB4        &trans
                                  &trans    &trans    &trans       &trans    &trans     &trans
             >;
         };
