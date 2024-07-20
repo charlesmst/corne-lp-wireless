@@ -11,13 +11,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAU 0
-#define GAMIN 1
-#define NUMBE 2
-#define SYMBO 3
-#define LOGAM 4
-#define SUPER 5
-#define TILIN 6
-#define MOUSE 7
+#define WINDO 1
+#define GAMIN 2
+#define NUMBE 3
+#define SYMBO 4
+#define LOGAM 5
+#define SUPER 6
+#define TILIN 7
+#define TILWI 8
+#define MOUSE 9
 
 &nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
 
@@ -107,7 +109,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&to GAMIN>,  <&bt BT_SEL 3>;
+            bindings = <&to WINDO>,  <&bt BT_SEL 3>;
         };
 
         bt_macro_4: bt_macro_4 {
@@ -116,7 +118,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <0>;
-            bindings = <&to GAMIN>,  <&bt BT_SEL 4>;
+            bindings = <&to WINDO>,  <&bt BT_SEL 4>;
         };
     };
 
@@ -128,6 +130,16 @@
             bindings = <
 &kp TAB    &kp Q    &kp W        &kp E       &kp R       &kp T              &kp Y          &kp U       &kp I       &kp O         &kp P           &kp BSPC
 &lt TILIN ESC  &lt TILIN A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G              &kp H          &hm LGUI J  &hm RALT K  &hm RCTRL L   &lt TILIN SEMI      &kp SQT
+&kp LSHFT  &kp Z    &kp X        &kp C       &kp V       &kp B              &kp N          &kp M       &kp COMMA   &hm RALT DOT  &hm RCTRL FSLH  &kp RSHFT
+                                 &mo MOUSE       &mo NUMBE       &hm LSHFT SPACE    &hk LSHFT RET  &mo SYMBO       &kp LCTRL
+            >;
+        };
+
+        windows {
+            label = "Win";
+            bindings = <
+&kp TAB    &kp Q    &kp W        &kp E       &kp R       &kp T              &kp Y          &kp U       &kp I       &kp O         &kp P           &kp BSPC
+&lt TILWI ESC  &lt TILWI A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G              &kp H          &hm LGUI J  &hm RALT K  &hm RCTRL L   &lt TILIN SEMI      &kp SQT
 &kp LSHFT  &kp Z    &kp X        &kp C       &kp V       &kp B              &kp N          &kp M       &kp COMMA   &hm RALT DOT  &hm RCTRL FSLH  &kp RSHFT
                                  &mo MOUSE       &mo NUMBE       &hm LSHFT SPACE    &hk LSHFT RET  &mo SYMBO       &kp LCTRL
             >;
@@ -188,6 +200,16 @@
 &trans  &hs LC(LA(LS(N1))) LA(LS(N1))  &hs LC(LA(LS(N2))) LA(LS(N2))  &hs LC(LA(LS(N3))) LA(LS(N3))  &hs LC(LA(LS(N4))) LA(LS(N4))  &hs LC(LA(LS(N5))) LA(LS(N5))    &hs LC(LA(LS(N6))) LA(LS(N6))  &hs LC(LA(LS(N7))) LA(LS(N7))  &hs LC(LA(LS(N8))) LA(LS(N8))  &hs LC(LA(LS(N9))) LA(LS(N9))  &trans  &trans
 &trans  &trans                         &kp LA(LS(W))                  &hs LC(LA(LS(E))) LA(LS(E))    &hs LC(LA(LS(R))) LA(LS(R))    &hs LC(LA(LS(T))) LA(LS(T))      &trans                         &trans                         &trans                         &trans                         &trans  &trans
 &trans  &kp LA(LS(A))                  &kp LA(LS(S))                  &kp LA(LS(D))                  &trans                         &trans                           &trans                         &trans                         &trans                         &trans                         &trans  &trans
+                                                                      &trans                         &trans                         &kp LG(SPACE)                    &trans                         &trans                         &trans
+            >;
+        };
+
+        tiling_win_layer {
+            label = "W2";
+            bindings = <
+&trans  &hs LC(LA(LS(N1))) LA(LS(N1))  &hs LC(LA(LS(N2))) LA(LS(N2))  &hs LC(LA(LS(N3))) LA(LS(N3))  &hs LC(LA(LS(N4))) LA(LS(N4))  &hs LC(LA(LS(N5))) LA(LS(N5))    &hs LC(LA(LS(N6))) LA(LS(N6))  &hs LC(LA(LS(N7))) LA(LS(N7))  &hs LC(LA(LS(N8))) LA(LS(N8))  &hs LC(LA(LS(N9))) LA(LS(N9))  &trans  &trans
+&trans  &trans                         &kp RA(TAB)                  &hs LC(LA(LS(E))) LA(LS(E))    &hs LC(LA(LS(R))) LA(LS(R))    &hs LC(LA(LS(T))) LA(LS(T))      &trans                         &trans                         &trans                         &trans                         &trans  &trans
+&trans  &kp RA(LS(TAB))                  &kp LA(LS(S))                  &kp LA(LS(D))                  &trans                         &trans                           &trans                         &trans                         &trans                         &trans                         &trans  &trans
                                                                       &trans                         &trans                         &kp LG(SPACE)                    &trans                         &trans                         &trans
             >;
         };
