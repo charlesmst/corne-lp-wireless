@@ -21,7 +21,7 @@
 #define TILWI 8
 #define MOUSE 9
 
-// &nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
+&nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
 
 &kscan0 {
     debounce-press-ms = <1>;
