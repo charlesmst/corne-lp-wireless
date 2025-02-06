@@ -73,6 +73,75 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+        swap: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+            ignored-key-positions = <26>;
+        };
+        w1: w1 {
+            compatible = "zmk,behavior-tri-state";
+            label = "WIN OPEN 1";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp N1>, <&kt LGUI>;
+        };
+
+        w2: w2 {
+            compatible = "zmk,behavior-tri-state";
+            label = "WIN OPEN 2";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp N2>, <&kt LGUI>;
+        };
+
+        w3: w3 {
+            compatible = "zmk,behavior-tri-state";
+            label = "WIN OPEN 3";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp N3>, <&kt LGUI>;
+        };
+
+        w4: w4 {
+            compatible = "zmk,behavior-tri-state";
+            label = "WIN OPEN 4";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp N4>, <&kt LGUI>;
+        };
+
+        w5: w5 {
+            compatible = "zmk,behavior-tri-state";
+            label = "WIN OPEN 5";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp N5>, <&kt LGUI>;
+        };
+
+        w6: w6 {
+            compatible = "zmk,behavior-tri-state";
+            label = "WIN OPEN 6";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp N6>, <&kt LGUI>;
+        };
+
+        w7: w7 {
+            compatible = "zmk,behavior-tri-state";
+            label = "WIN OPEN 7";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp N7>, <&kt LGUI>;
+        };
+
+        w8: w8 {
+            compatible = "zmk,behavior-tri-state";
+            label = "WIN OPEN 8";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp N8>, <&kt LGUI>;
+        };
+
+        w9: w9 {
+            compatible = "zmk,behavior-tri-state";
+            label = "WIN OPEN 9";
+            #binding-cells = <0>;
+            bindings = <&kt LGUI>, <&kp N9>, <&kt LGUI>;
+        };
     };
 
     macros {
@@ -207,9 +276,9 @@
         tiling_win_layer {
             label = "TWin";
             bindings = <
-&trans  &kp LG(N1)    &kp LG(N2)      &kp LG(N3)                  &kp LG(N4)                  &kp LG(N5)                    &kp LG(N6)   &kp LG(N7)  &kp LG(N8)  &kp LG(N9) &trans  &trans
-&trans  &trans        &kp RA(TAB)     &hs LC(LA(LS(E))) LA(LS(E)) &hs LC(LA(LS(R))) LA(LS(R)) &hs LC(LA(LS(T))) LA(LS(T))   &trans       &trans      &trans      &trans                         &trans  &trans
-&trans  &kp LA(LS(D)) &kp RA(LS(TAB)) &kp LA(LS(D))               &trans                      &trans                        &trans       &trans      &trans                      &trans                      &trans  &trans
+&trans  &w1           &w2             &w3                         &w4                         &w5                           &w6          &w7         &w8         &w9        &trans  &trans
+&trans  &trans        &swap           &hs LC(LA(LS(E))) LA(LS(E)) &hs LC(LA(LS(R))) LA(LS(R)) &hs LC(LA(LS(T))) LA(LS(T))   &trans       &trans      &trans      &trans                         &trans  &trans
+&trans  &kp LA(LS(D)) &kp LS(TAB)     &kp LA(LS(D))               &trans                      &trans                        &trans       &trans      &trans                      &trans                      &trans  &trans
                                                                   &trans                      &trans                         &kp LGUI                    &trans                         &trans                         &trans
             >;
         };
