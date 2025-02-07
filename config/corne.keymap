@@ -23,6 +23,8 @@
 
 &nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
 
+#define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
+
 &kscan0 {
     debounce-press-ms = <1>;
     debounce-release-ms = <5>;
@@ -72,6 +74,13 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
         };
         swap: swapper {
             compatible = "zmk,behavior-tri-state";
@@ -200,7 +209,7 @@
 &kp TAB    &kp Q    &kp W        &kp E       &kp R       &kp T              &kp Y          &kp U       &kp I       &kp O         &kp P           &kp BSPC
 &lt TILIN ESC  &lt TILIN A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G              &kp H          &hm LGUI J  &hm RALT K  &hm RCTRL L   &lt TILIN SEMI      &kp SQT
 &kp LSHFT  &kp Z    &kp X        &kp C       &kp V       &kp B              &kp N          &kp M       &kp COMMA   &hm RALT DOT  &hm RCTRL FSLH  &kp RSHFT
-                                 &mo MOUSE       &mo NUMBE       &hm LSHFT SPACE    &hk LSHFT RET  &mo SYMBO       &kp LCTRL
+                                 MO_TOG(MOUSE)  &mo NUMBE       &hm LSHFT SPACE    &hk LSHFT RET  &mo SYMBO       &kp LCTRL
             >;
         };
 
@@ -210,7 +219,7 @@
 &kp TAB    &kp Q    &kp W        &kp E       &kp R       &kp T              &kp Y          &kp U       &kp I       &kp O         &kp P           &kp BSPC
 &lt TILWI ESC  &lt TILWI A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G              &kp H          &hm LGUI J  &hm RALT K  &hm RCTRL L   &lt TILWI SEMI      &kp SQT
 &kp LSHFT  &kp Z    &kp X        &kp C       &kp V       &kp B              &kp N          &kp M       &kp COMMA   &hm RALT DOT  &hm RCTRL FSLH  &kp RSHFT
-                                 &mo MOUSE       &mo NUMBE       &hm LSHFT SPACE    &hk LSHFT RET  &mo SYMBO       &kp LCTRL
+                                 MO_TOG(MOUSE)   &mo NUMBE       &hm LSHFT SPACE    &hk LSHFT RET  &mo SYMBO       &kp LCTRL
             >;
         };
 
