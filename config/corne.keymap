@@ -209,7 +209,7 @@
 &kp TAB    &kp Q    &kp W        &kp E       &kp R       &kp T              &kp Y          &kp U       &kp I       &kp O         &kp P           &kp BSPC
 &lt TILIN ESC  &lt TILIN A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G              &kp H          &hm LGUI J  &hm RALT K  &hm RCTRL L   &lt TILIN SEMI      &kp SQT
 &kp LSHFT  &kp Z    &kp X        &kp C       &kp V       &kp B              &kp N          &kp M       &kp COMMA   &hm RALT DOT  &hm RCTRL FSLH  &kp RSHFT
-                                 MO_TOG(MOUSE)  &mo NUMBE       &hm LSHFT SPACE    &hk LSHFT RET  &mo SYMBO       &kp LCTRL
+                                 MO_TOG(MOUSE)  &mo NUMBE       &hm LSHFT SPACE    &hk RSHFT RET  &mo SYMBO       &kp LCTRL
             >;
         };
 
@@ -219,7 +219,7 @@
 &kp TAB    &kp Q    &kp W        &kp E       &kp R       &kp T              &kp Y          &kp U       &kp I       &kp O         &kp P           &kp BSPC
 &lt TILWI ESC  &lt TILWI A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G              &kp H          &hm LGUI J  &hm RALT K  &hm RCTRL L   &lt TILWI SEMI      &kp SQT
 &kp LSHFT  &kp Z    &kp X        &kp C       &kp V       &kp B              &kp N          &kp M       &kp COMMA   &hm RALT DOT  &hm RCTRL FSLH  &kp RSHFT
-                                 MO_TOG(MOUSE)   &mo NUMBE       &hm LSHFT SPACE    &hk LSHFT RET  &mo SYMBO       &kp LCTRL
+                                 MO_TOG(MOUSE)   &mo NUMBE       &hm LSHFT SPACE    &hk RSHFT RET  &mo SYMBO       &kp LCTRL
             >;
         };
 
